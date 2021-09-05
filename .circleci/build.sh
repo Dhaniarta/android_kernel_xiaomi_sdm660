@@ -35,7 +35,7 @@ echo ================================================
 # Compiler
 function compile() {
 
-   # Your Telegram Group
+   # Kitsune.alpha
    curl -s -X POST "https://api.telegram.org/bot$token/sendMessage" \
         -d chat_id="-1001506766747" \
         -d "disable_web_page_preview=true" \
@@ -53,7 +53,7 @@ function compile() {
 	finerr
 	exit 1
    fi
-        git clone --depth=1 ${AnyKernel} AnyKernel
+        git clone --depth=1 https://github.com/Dhaniarta/AnyKernel3 AnyKernel
 	cp out/arch/arm64/boot/Image.gz-dtb AnyKernel
 }
 
