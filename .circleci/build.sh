@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 echo "Downloading few Dependecies . . ."
-git clone --depth=1 $kernel_source $device_codename
+git clone --depth=1 https://github.com/Dhaniarta/android_kernel_xiaomi_sdm660 whyred
 git clone --depth=1 https://github.com/xyz-prjkt/xRageTC-clang clang
 
 # Main
