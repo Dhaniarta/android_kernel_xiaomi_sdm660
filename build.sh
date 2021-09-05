@@ -5,7 +5,7 @@ git clone --depth=1 https://github.com/xyz-prjkt/xRageTC-clang clang
 
 # Main
 ANYKERNEL=$anykernel https://github.com/Dhaniarta/AnyKernel3 # IMPORTANT ! Declare your AnyKernel Github Repository
-KERNEL_NAME=$Kitsune |alpha| # IMPORTANT ! Declare your kernel name
+KERNEL_NAME=$Kitsune # IMPORTANT ! Declare your kernel name
 KERNEL_ROOTDIR=$(pwd)/$whyred # IMPORTANT ! Fill with your kernel source root directory.
 DEVICE_CODENAME=$whyred # IMPORTANT ! Declare your device codename
 DEVICE_DEFCONFIG=$whyred_defconfig # IMPORTANT ! Declare your kernel source defconfig file here.
