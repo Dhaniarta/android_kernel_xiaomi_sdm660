@@ -44,7 +44,7 @@ function compile() {
 
    # Kitsune.alpha
    curl -s -X POST "https://api.telegram.org/bot$token/sendMessage" \
-        -d chat_id="-1001506766747" \
+        -d chat_id="-1001558149701" \
         -d "disable_web_page_preview=true" \
         -d "parse_mode=html" \
         -d text="<b>xKernelCompiler</b>%0ABUILDER NAME : <code>${KBUILD_BUILD_USER}</code>%0ABUILDER HOST : <code>${KBUILD_BUILD_HOST}</code>%0ADEVICE DEFCONFIG : <code>${DEVICE_DEFCONFIG}</code>%0ACLANG VERSION : <code>$(${CLANG_ROOTDIR}/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g')</code>%0ACLANG ROOTDIR : <code>${CLANG_ROOTDIR}</code>%0AKERNEL ROOTDIR : <code>${KERNEL_ROOTDIR}</code>"
@@ -75,7 +75,7 @@ function push() {
         -F caption="Compile took $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) second(s). | For <b>Xiaomi Redmi Note 5 (whyred)</b> | <b>$(${CLANG_ROOTDIR}/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g')</b>"
 
     curl -F document=@$ZIP "https://api.telegram.org/bot$token/sendDocument" \
-        -F chat_id="-1001506766747" \
+        -F chat_id="-1001558149701" \
         -F "disable_web_page_preview=true" \
         -F "parse_mode=html" \
         -F caption="Compile took $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) second(s). | For <b>Xiaomi Redmi Note 5 (whyred)</b> | <b>$(${CLANG_ROOTDIR}/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g')</b>"
@@ -90,7 +90,7 @@ function finerr() {
         -d text="Build throw an error(s)"
 
     curl -s -X POST "https://api.telegram.org/bot$token/sendMessage" \
-        -d chat_id="-1001506766747" \
+        -d chat_id="-1001558149701" \
         -d "disable_web_page_preview=true" \
         -d "parse_mode=markdown" \
         -d text="Build throw an error(s)"
